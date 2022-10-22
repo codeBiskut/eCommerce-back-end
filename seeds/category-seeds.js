@@ -1,4 +1,3 @@
-const sequelize = require('../config/connection')
 const { Category } = require('../models');
 
 const categoryData = [
@@ -19,8 +18,6 @@ const categoryData = [
   },
 ];
 
-const seedCategories = async () => {
-  await Category.bulkCreate(categoryData);
-}
+const seedCategories = () => Category.bulkCreate(categoryData);
 
 module.exports = seedCategories;
